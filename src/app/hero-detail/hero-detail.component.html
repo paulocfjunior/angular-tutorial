@@ -1,4 +1,4 @@
-<div *ngIf="hero">
+<div class="component-box drop-shadow float-clear" *ngIf="hero">
 
   <h2>{{ hero.name | uppercase }} Details</h2>
   <div><span>id: </span>{{hero.id}}</div>
@@ -7,6 +7,6 @@
       <input [(ngModel)]="hero.name" placeholder="name"/>
     </label>
   </div>
-  <button (click)="save()">save</button>
-  <button (click)="goBack()">go back</button>
+  <button class="default-btn float-right" (click)="save()">save</button>
+  <button class="default-btn float-left" (click)="goBack()">go back</button>
 </div>

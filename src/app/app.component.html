@@ -1,7 +1,9 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
-</nav>
+<div class="component-box drop-shadow">
+	<h1>{{title}}</h1>
+	<nav>
+	  <a class="drop-shadow shadow-hover" routerLink="/dashboard">Dashboard</a>
+	  <a class="drop-shadow shadow-hover" routerLink="/heroes">Heroes</a>
+	</nav>
+</div>
 <router-outlet></router-outlet>
 <app-messages></app-messages>

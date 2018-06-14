@@ -1,0 +1,83 @@
+@import 'assets/css/variables';
+
+* {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 250%;
+}
+
+h2, h3 {
+  color: #444;
+  font-weight: lighter;
+}
+
+.component-box {
+	border: 1px solid $border-light;
+	padding: 15px;
+	background: $background-light;
+	margin: 15px auto;
+	width: calc(100% - 30px);
+	border-radius: 3px;
+	max-width: 900px;
+}
+
+.drop-shadow {
+	box-shadow: 0 2px 3px rgba(33, 33, 33, 0.3);
+	transition: box-shadow 200ms;
+
+	&.shadow-hover:hover,
+	&.shadow-hover:focus {
+		box-shadow: 0 1px 2px rgba(33, 33, 33, 0.3);
+	}
+
+	&.shadow-hover:active {
+		box-shadow: 0 0 1px rgba(33, 33, 33, 0.3);
+	}
+}
+
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-clear::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.default-btn {
+	background-color: #EEE;
+	font-size: 16px;
+	padding: 7px 12px;
+	border: 1px solid #CCC;
+	margin-top: 15px;
+
+	&.success {
+		background-color: #3F3;
+	}
+
+	&.warning {
+		background-color: #F70;
+	}
+
+	&.error {
+		background-color: #F33;
+	}
+}
+
+.position-relative {
+	position: relative;
+}
+
+.absolute-top-right {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}

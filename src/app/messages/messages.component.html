@@ -1,8 +1,10 @@
-<div *ngIf="messageService.messages.length">
+<div class="component-box drop-shadow position-relative" *ngIf="messageService.messages.length">
 
   <h2>Messages</h2>
-  <button class="clear"
-          (click)="messageService.clear()">clear</button>
-  <div *ngFor='let message of messageService.messages'> {{message}} </div>
+  <button class="default-btn absolute-top-right"
+          (click)="messageService.clear()">Clear</button>
+  <div class="message-list">
+    <div *ngFor='let message of messageService.messages'>{{message}}</div>
+  </div>
 
 </div>

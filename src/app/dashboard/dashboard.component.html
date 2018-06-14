@@ -1,9 +1,7 @@
-<h3>Top Heroes</h3>
-<div class="top-heroes">
-  <a *ngFor="let hero of heroes" class="hero-container"
+<div class="top-heroes component-box drop-shadow">
+  <h3>Top Heroes</h3>
+  <a *ngFor="let hero of heroes" class="hero drop-shadow shadow-hover"
      routerLink="/detail/{{hero.id}}">
-    <div class="hero">
-      <h4>{{hero.name}}</h4>
-    </div>
+      {{hero.name}}
   </a>
 </div>

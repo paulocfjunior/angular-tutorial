@@ -1,20 +1,32 @@
-<h2>My Heroes</h2>
-
-<div>
+<div class="create component-box drop-shadow">
+  <h2>Create Hero</h2>
   <label>Hero name:
     <input #heroName />
   </label>
   <button (click)="add(heroName.value); heroName.value=''">
-    New Hero
+    Create
   </button>
 </div>
 
-<ul class="heroes">
-  <li *ngFor="let hero of heroes">
-    <a routerLink="/detail/{{hero.id}}">
-      <span class="badge">{{hero.id}}</span> {{hero.name}}
-    </a>
-    <button class="delete" title="delete hero"
-      (click)="delete(hero)">x</button>
-  </li>
-</ul>
+<div class="component-box drop-shadow">
+  <h2>My Heroes</h2>
+  <table class="heroes" cellspacing="0">
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>OPTIONS</th>
+    </tr>
+    <tr *ngFor="let hero of heroes">
+      <td class="align-center">{{hero.id}}</td>
+      <td>
+        <a routerLink="/detail/{{hero.id}}">
+           {{hero.name}}
+        </a>
+      </td>
+      <td class="align-center">
+        <button class="delete" title="delete hero"
+          (click)="delete(hero)">x</button>
+      </td>
+    </tr>
+  </table>
+</div>

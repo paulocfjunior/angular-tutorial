@@ -1,0 +1,18 @@
+.hero {
+	text-decoration: none;
+	color: #EEE;
+	padding: 22px 35px;
+	display: inline-flex;
+	background-color: #444;
+	font-weight: bold;
+	transition: all 200ms;
+	border-radius: 3px;
+
+	&:hover {
+		background-color: #222;
+	}
+
+	& + .hero {
+		margin-left: 10px;
+	}
+}

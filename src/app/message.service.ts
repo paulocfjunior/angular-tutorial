@@ -10,7 +10,8 @@ export class MessageService {
   constructor() { }
 
   add(message: string) {
-    this.messages.push(message);
+    let date = new Date();
+    this.messages.push('[' + date.toLocaleTimeString() + '] ' + message);
   }
 
   clear():void {
